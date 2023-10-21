@@ -5,9 +5,18 @@ const validate = require("../middlewares/validate");
 
 const router = express.Router();
 
-/** create product */
+/** create product
 router.post(
   "/create-product",
+  validate(productValidation.createProduct),
+  productController.createProduct
+);*/
+
+/** Create product */
+router.post(
+  "/create-product",
+  //auth(),
+  upload.single("product_image"),
   validate(productValidation.createProduct),
   productController.createProduct
 );
@@ -27,5 +36,6 @@ router.put(
   "/update-product/:productId",
   productController.updateProduct
 )
+
 
 module.exports = router;

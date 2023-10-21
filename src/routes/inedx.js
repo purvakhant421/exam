@@ -1,8 +1,8 @@
 const express = require("express");
 const userRoute = require("./user.route");
-const productRoute = require("./product.route.js");
+const productRoute = require("./product.route");
 const cartRoute = require("./cart.route");
-const orderRoute = require("./order.route.js");
+const orderRoute = require("./order.route");
 
 
 
